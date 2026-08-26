@@ -39,7 +39,20 @@ const version = createHash("sha1")
   .digest("hex")
   .slice(0, 10);
 
-const urls = entries.map((e) => e.url);
+/**
+ * Vercel bật cleanUrls nên /trip.html bị 308 sang /trip. Precache thẳng URL
+ * .html thì cache lưu phải response "đã redirect", và Safari từ chối dùng nó
+ * để mở trang ("Response served by service worker has redirections").
+ * Nên đổi hết sang URL sạch trước khi cache.
+ */
+function cleanUrl(url) {
+  if (url === "/index.html") return "/";
+  if (url.endsWith("/index.html")) return url.slice(0, -"index.html".length);
+  if (url.endsWith(".html")) return url.slice(0, -".html".length);
+  return url;
+}
+
+const urls = [...new Set(entries.map((e) => cleanUrl(e.url)))];
 const total = entries.reduce((sum, e) => sum + e.size, 0);
 
 const template = await readFile(path.join(ROOT, "scripts/sw-template.js"), "utf8");
