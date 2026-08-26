@@ -1,0 +1,240 @@
+{
+  "_meta": {
+    "app": "Kame to Taipei",
+    "mascot": "うみがめ（沖縄うまれ）",
+    "learner": "16歳・日本語話者・中国語ゼロ",
+    "tripDate": "2026-09-19",
+    "tripDays": 3,
+    "tripNights": 2,
+    "note": "tripDate はここ 1 か所だけ。カウントダウンも日付表示もこの値から計算する。",
+    "fields": {
+      "hanzi": "繁体字（台湾）",
+      "pinyin": "ピンイン",
+      "ja": "日本語の意味",
+      "kana": "カタカナ近似音（補助・小さく表示）"
+    }
+  },
+
+  "levels": [
+    {
+      "id": "day1",
+      "day": 1,
+      "date": "2026-09-19",
+      "title": "台北にとうちゃく",
+      "subtitle": "はじめまして、台湾",
+      "schedule": [
+        { "time": "09:00", "place": "那覇空港", "ja": "出発。フライトは約1時間半" },
+        { "time": "11:30", "place": "桃園空港", "ja": "到着。悠遊卡を買う" },
+        { "time": "13:00", "place": "台北市内", "ja": "MRTでホテルへ、チェックイン" },
+        { "time": "18:00", "place": "士林夜市", "ja": "台湾ではじめての夜ごはん" }
+      ],
+      "lessons": [
+        {
+          "id": "d1l1",
+          "title": "まずは あいさつ",
+          "scene": "空港に着いてすぐ使うことば",
+          "words": [
+            { "hanzi": "你好", "pinyin": "nǐ hǎo", "ja": "こんにちは", "kana": "ニーハオ" },
+            { "hanzi": "謝謝", "pinyin": "xiè xie", "ja": "ありがとう", "kana": "シエシエ" },
+            { "hanzi": "不客氣", "pinyin": "bú kè qì", "ja": "どういたしまして", "kana": "ブークーチー" },
+            { "hanzi": "對不起", "pinyin": "duì bu qǐ", "ja": "ごめんなさい", "kana": "ドゥイブチー" },
+            { "hanzi": "不好意思", "pinyin": "bù hǎo yì si", "ja": "すみません（声をかけるとき）", "kana": "ブーハオイースー" },
+            { "hanzi": "請問", "pinyin": "qǐng wèn", "ja": "ちょっとおたずねします", "kana": "チンウェン" },
+            { "hanzi": "我是日本人", "pinyin": "wǒ shì rì běn rén", "ja": "わたしは日本人です", "kana": "ウォシー リーベンレン" },
+            { "hanzi": "再見", "pinyin": "zài jiàn", "ja": "さようなら", "kana": "ザイジエン" }
+          ]
+        },
+        {
+          "id": "d1l2",
+          "title": "悠遊卡と MRT",
+          "scene": "空港でカードを買って、電車で市内へ",
+          "words": [
+            { "hanzi": "悠遊卡", "pinyin": "yōu yóu kǎ", "ja": "悠遊カード（ICカード）", "kana": "ヨウヨウカー" },
+            { "hanzi": "我要買悠遊卡", "pinyin": "wǒ yào mǎi yōu yóu kǎ", "ja": "悠遊カードを買いたいです", "kana": "ウォヤオマイ ヨウヨウカー" },
+            { "hanzi": "加值", "pinyin": "jiā zhí", "ja": "チャージ", "kana": "ジアジー" },
+            { "hanzi": "捷運", "pinyin": "jié yùn", "ja": "MRT（地下鉄）", "kana": "ジエユン" },
+            { "hanzi": "車站在哪裡", "pinyin": "chē zhàn zài nǎ lǐ", "ja": "駅はどこですか", "kana": "チャージャン ザイナーリー" },
+            { "hanzi": "多少錢", "pinyin": "duō shǎo qián", "ja": "いくらですか", "kana": "ドゥオシャオチエン" },
+            { "hanzi": "這班車去台北嗎", "pinyin": "zhè bān chē qù tái běi ma", "ja": "この電車は台北に行きますか", "kana": "ジャーバンチャー チュイタイベイマ" },
+            { "hanzi": "台北車站", "pinyin": "tái běi chē zhàn", "ja": "台北駅", "kana": "タイベイチャージャン" }
+          ]
+        },
+        {
+          "id": "d1l3",
+          "title": "ホテルにチェックイン",
+          "scene": "フロントで話す",
+          "words": [
+            { "hanzi": "我有訂房", "pinyin": "wǒ yǒu dìng fáng", "ja": "予約しています", "kana": "ウォヨウ ディンファン" },
+            { "hanzi": "辦理入住", "pinyin": "bàn lǐ rù zhù", "ja": "チェックイン", "kana": "バンリールージュー" },
+            { "hanzi": "幾點", "pinyin": "jǐ diǎn", "ja": "何時ですか", "kana": "ジーディエン" },
+            { "hanzi": "密碼", "pinyin": "mì mǎ", "ja": "パスワード（Wi-Fi）", "kana": "ミーマー" },
+            { "hanzi": "行李", "pinyin": "xíng lǐ", "ja": "荷物", "kana": "シンリー" },
+            { "hanzi": "謝謝你的幫忙", "pinyin": "xiè xie nǐ de bāng máng", "ja": "手伝ってくれてありがとう", "kana": "シエシエ ニーダ バンマン" }
+          ]
+        },
+        {
+          "id": "d1l4",
+          "title": "士林夜市",
+          "scene": "屋台で買って食べる",
+          "words": [
+            { "hanzi": "士林夜市", "pinyin": "shì lín yè shì", "ja": "士林ナイトマーケット", "kana": "シーリン イエシー" },
+            { "hanzi": "這是什麼", "pinyin": "zhè shì shén me", "ja": "これは何ですか", "kana": "ジャーシー シェンマ" },
+            { "hanzi": "我要一個", "pinyin": "wǒ yào yí ge", "ja": "ひとつください", "kana": "ウォヤオ イーガ" },
+            { "hanzi": "好吃", "pinyin": "hǎo chī", "ja": "おいしい（食べもの）", "kana": "ハオチー" },
+            { "hanzi": "太辣了", "pinyin": "tài là le", "ja": "辛すぎます", "kana": "タイラーラ" },
+            { "hanzi": "可以試吃嗎", "pinyin": "kě yǐ shì chī ma", "ja": "試食できますか", "kana": "クーイー シーチーマ" },
+            { "hanzi": "雞排", "pinyin": "jī pái", "ja": "台湾風フライドチキン", "kana": "ジーパイ" },
+            { "hanzi": "我吃飽了", "pinyin": "wǒ chī bǎo le", "ja": "おなかいっぱいです", "kana": "ウォチーバオラ" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "day2",
+      "day": 2,
+      "date": "2026-09-20",
+      "title": "九份とゆうやけ",
+      "subtitle": "高いところと、赤い提灯",
+      "schedule": [
+        { "time": "10:00", "place": "台北101", "ja": "89階の展望台へ" },
+        { "time": "12:30", "place": "小籠包のお店", "ja": "台湾に来たら、これ" },
+        { "time": "15:00", "place": "九份へ移動", "ja": "バスで山のほうへ" },
+        { "time": "17:30", "place": "九份老街", "ja": "夕暮れの提灯を見る" }
+      ],
+      "lessons": [
+        {
+          "id": "d2l1",
+          "title": "台北101にのぼる",
+          "scene": "チケットを買って展望台へ",
+          "words": [
+            { "hanzi": "台北101", "pinyin": "tái běi yī líng yī", "ja": "台北101", "kana": "タイベイ イーリンイー" },
+            { "hanzi": "我要兩張票", "pinyin": "wǒ yào liǎng zhāng piào", "ja": "チケットを2枚ください", "kana": "ウォヤオ リャンジャンピャオ" },
+            { "hanzi": "觀景台", "pinyin": "guān jǐng tái", "ja": "展望台", "kana": "グアンジンタイ" },
+            { "hanzi": "電梯", "pinyin": "diàn tī", "ja": "エレベーター", "kana": "ディエンティー" },
+            { "hanzi": "好高", "pinyin": "hǎo gāo", "ja": "とても高い", "kana": "ハオガオ" },
+            { "hanzi": "好漂亮", "pinyin": "hǎo piào liàng", "ja": "とてもきれい", "kana": "ハオピャオリャン" },
+            { "hanzi": "可以幫我拍照嗎", "pinyin": "kě yǐ bāng wǒ pāi zhào ma", "ja": "写真を撮ってもらえますか", "kana": "クーイー バンウォ パイジャオマ" },
+            { "hanzi": "一起拍", "pinyin": "yì qǐ pāi", "ja": "いっしょに撮ろう", "kana": "イーチーパイ" }
+          ]
+        },
+        {
+          "id": "d2l2",
+          "title": "小籠包を たべる",
+          "scene": "レストランで注文する",
+          "words": [
+            { "hanzi": "小籠包", "pinyin": "xiǎo lóng bāo", "ja": "小籠包", "kana": "シャオロンバオ" },
+            { "hanzi": "幾位", "pinyin": "jǐ wèi", "ja": "何名様ですか（店員が聞く）", "kana": "ジーウェイ" },
+            { "hanzi": "兩位", "pinyin": "liǎng wèi", "ja": "2人です", "kana": "リャンウェイ" },
+            { "hanzi": "我要點餐", "pinyin": "wǒ yào diǎn cān", "ja": "注文したいです", "kana": "ウォヤオ ディエンツァン" },
+            { "hanzi": "這個", "pinyin": "zhè ge", "ja": "これ", "kana": "ジャーガ" },
+            { "hanzi": "再一份", "pinyin": "zài yí fèn", "ja": "もうひとつ", "kana": "ザイイーフェン" },
+            { "hanzi": "熱茶", "pinyin": "rè chá", "ja": "あたたかいお茶", "kana": "ラーチャー" },
+            { "hanzi": "買單", "pinyin": "mǎi dān", "ja": "お会計", "kana": "マイダン" }
+          ]
+        },
+        {
+          "id": "d2l3",
+          "title": "九份へ いく",
+          "scene": "バスに乗って山のほうへ",
+          "words": [
+            { "hanzi": "九份", "pinyin": "jiǔ fèn", "ja": "九份", "kana": "ジウフェン" },
+            { "hanzi": "怎麼去", "pinyin": "zěn me qù", "ja": "どうやって行きますか", "kana": "ゼンマチュイ" },
+            { "hanzi": "公車", "pinyin": "gōng chē", "ja": "バス", "kana": "ゴンチャー" },
+            { "hanzi": "要多久", "pinyin": "yào duō jiǔ", "ja": "どのくらいかかりますか", "kana": "ヤオドゥオジウ" },
+            { "hanzi": "在哪裡下車", "pinyin": "zài nǎ lǐ xià chē", "ja": "どこで降りますか", "kana": "ザイナーリー シアチャー" },
+            { "hanzi": "下一站", "pinyin": "xià yí zhàn", "ja": "次の駅・次のバス停", "kana": "シアイージャン" },
+            { "hanzi": "我要下車", "pinyin": "wǒ yào xià chē", "ja": "降ります", "kana": "ウォヤオ シアチャー" },
+            { "hanzi": "我迷路了", "pinyin": "wǒ mí lù le", "ja": "道に迷いました", "kana": "ウォ ミールーラ" }
+          ]
+        },
+        {
+          "id": "d2l4",
+          "title": "九份老街と お茶",
+          "scene": "提灯の階段と、茶芸館",
+          "words": [
+            { "hanzi": "老街", "pinyin": "lǎo jiē", "ja": "古い町並み", "kana": "ラオジエ" },
+            { "hanzi": "燈籠", "pinyin": "dēng lóng", "ja": "提灯", "kana": "ドンロン" },
+            { "hanzi": "夕陽", "pinyin": "xī yáng", "ja": "夕日", "kana": "シーヤン" },
+            { "hanzi": "好美", "pinyin": "hǎo měi", "ja": "とてもうつくしい", "kana": "ハオメイ" },
+            { "hanzi": "我想喝茶", "pinyin": "wǒ xiǎng hē chá", "ja": "お茶が飲みたいです", "kana": "ウォシャン ハーチャー" },
+            { "hanzi": "可以坐這裡嗎", "pinyin": "kě yǐ zuò zhè lǐ ma", "ja": "ここに座ってもいいですか", "kana": "クーイー ズオジャーリーマ" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "day3",
+      "day": 3,
+      "date": "2026-09-21",
+      "title": "おみやげと バイバイ",
+      "subtitle": "また来るね、台湾",
+      "schedule": [
+        { "time": "10:00", "place": "西門町", "ja": "若者の街でショッピング" },
+        { "time": "13:00", "place": "タピオカのお店", "ja": "甘さと氷を自分で選ぶ" },
+        { "time": "15:00", "place": "おみやげ探し", "ja": "パイナップルケーキなど" },
+        { "time": "18:00", "place": "桃園空港", "ja": "那覇へ帰る" }
+      ],
+      "lessons": [
+        {
+          "id": "d3l1",
+          "title": "西門町で かいもの",
+          "scene": "服やグッズのお店で",
+          "words": [
+            { "hanzi": "西門町", "pinyin": "xī mén dīng", "ja": "西門町", "kana": "シーメンディン" },
+            { "hanzi": "可以試穿嗎", "pinyin": "kě yǐ shì chuān ma", "ja": "試着できますか", "kana": "クーイー シーチュアンマ" },
+            { "hanzi": "有別的顏色嗎", "pinyin": "yǒu bié de yán sè ma", "ja": "ほかの色はありますか", "kana": "ヨウ ビエダ イエンスーマ" },
+            { "hanzi": "大一點", "pinyin": "dà yì diǎn", "ja": "もう少し大きいの", "kana": "ダーイーディエン" },
+            { "hanzi": "太貴了", "pinyin": "tài guì le", "ja": "高すぎます", "kana": "タイグイラ" },
+            { "hanzi": "便宜一點", "pinyin": "pián yí yì diǎn", "ja": "少し安くしてください", "kana": "ピエンイー イーディエン" },
+            { "hanzi": "我只是看看", "pinyin": "wǒ zhǐ shì kàn kan", "ja": "見ているだけです", "kana": "ウォ ジーシー カンカン" },
+            { "hanzi": "我要這個", "pinyin": "wǒ yào zhè ge", "ja": "これをください", "kana": "ウォヤオ ジャーガ" }
+          ]
+        },
+        {
+          "id": "d3l2",
+          "title": "タピオカを 注文する",
+          "scene": "甘さと氷を自分で決める、台湾だけの言いかた",
+          "words": [
+            { "hanzi": "珍珠奶茶", "pinyin": "zhēn zhū nǎi chá", "ja": "タピオカミルクティー", "kana": "ジェンジュー ナイチャー" },
+            { "hanzi": "半糖", "pinyin": "bàn táng", "ja": "甘さ半分", "kana": "バンタン" },
+            { "hanzi": "微糖", "pinyin": "wéi táng", "ja": "甘さひかえめ", "kana": "ウェイタン" },
+            { "hanzi": "少冰", "pinyin": "shǎo bīng", "ja": "氷少なめ", "kana": "シャオビン" },
+            { "hanzi": "去冰", "pinyin": "qù bīng", "ja": "氷なし", "kana": "チュイビン" },
+            { "hanzi": "大杯", "pinyin": "dà bēi", "ja": "Lサイズ", "kana": "ダーベイ" },
+            { "hanzi": "內用還是外帶", "pinyin": "nèi yòng hái shì wài dài", "ja": "店内ですか、持ち帰りですか", "kana": "ネイヨン ハイシー ワイダイ" },
+            { "hanzi": "好喝", "pinyin": "hǎo hē", "ja": "おいしい（飲みもの）", "kana": "ハオハー" }
+          ]
+        },
+        {
+          "id": "d3l3",
+          "title": "おみやげと お会計",
+          "scene": "家族や友だちへのおみやげ",
+          "words": [
+            { "hanzi": "鳳梨酥", "pinyin": "fèng lí sū", "ja": "パイナップルケーキ", "kana": "フォンリースー" },
+            { "hanzi": "有推薦的嗎", "pinyin": "yǒu tuī jiàn de ma", "ja": "おすすめはありますか", "kana": "ヨウ トゥイジエンダマ" },
+            { "hanzi": "送禮", "pinyin": "sòng lǐ", "ja": "プレゼント用", "kana": "ソンリー" },
+            { "hanzi": "可以刷卡嗎", "pinyin": "kě yǐ shuā kǎ ma", "ja": "カードは使えますか", "kana": "クーイー シュアカーマ" },
+            { "hanzi": "要袋子", "pinyin": "yào dài zi", "ja": "袋をください", "kana": "ヤオダイズ" },
+            { "hanzi": "收據", "pinyin": "shōu jù", "ja": "レシート", "kana": "ショウジュイ" },
+            { "hanzi": "一共多少", "pinyin": "yí gòng duō shǎo", "ja": "全部でいくらですか", "kana": "イーゴン ドゥオシャオ" }
+          ]
+        },
+        {
+          "id": "d3l4",
+          "title": "バイバイ、台湾",
+          "scene": "空港へ向かう、最後のことば",
+          "words": [
+            { "hanzi": "機場", "pinyin": "jī chǎng", "ja": "空港", "kana": "ジーチャン" },
+            { "hanzi": "我要去機場", "pinyin": "wǒ yào qù jī chǎng", "ja": "空港へ行きたいです", "kana": "ウォヤオ チュイ ジーチャン" },
+            { "hanzi": "計程車", "pinyin": "jì chéng chē", "ja": "タクシー", "kana": "ジーチョンチャー" },
+            { "hanzi": "台灣很好玩", "pinyin": "tái wān hěn hǎo wán", "ja": "台湾はとても楽しかった", "kana": "タイワン ヘンハオワン" },
+            { "hanzi": "我還會再來", "pinyin": "wǒ hái huì zài lái", "ja": "また来ます", "kana": "ウォ ハイフイ ザイライ" },
+            { "hanzi": "掰掰", "pinyin": "bāi bāi", "ja": "バイバイ", "kana": "バイバイ" }
+          ]
+        }
+      ]
+    }
+  ]
+}

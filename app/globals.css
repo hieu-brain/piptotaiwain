@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  /* Bảng màu lấy từ chính bộ tranh */
+  --color-paper: #fbf2dc;
+  --color-paper-deep: #f2e4c6;
+  --color-card: #fffdf4;
+  --color-ink: #2f5e52;
+  --color-ink-soft: #6b8579;
+  --color-sea: #8fc9a8;
+  --color-sea-deep: #4e9e85;
+  --color-sea-pale: #eaf5ec;
+  --color-lantern: #d9483f;
+  --color-lantern-deep: #a83228;
+  --color-sand: #e8d5a9;
+  --color-gold: #e08a4a;
+  --color-shell: #f5e9c0;
+
+  --font-jp: var(--font-zen-maru), "Hiragino Maru Gothic ProN", "Yu Gothic",
+    sans-serif;
+  --font-han: var(--font-wenkai), "Noto Sans TC", "Hiragino Mincho ProN", serif;
+
+  --radius-tile: 18px;
+  --radius-card: 20px;
+  --radius-hero: 24px;
+}
+
+html {
+  background: var(--color-paper-deep);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-jp);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* Nút bấm vật lý: shadow đặc 4px phía dưới, nhấn xuống thì lún */
+@utility press {
+  transition:
+    transform 0.06s ease-out,
+    box-shadow 0.06s ease-out;
+}
+.press:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--press-shadow, var(--color-lantern-deep)) !important;
+}
+
+@keyframes kame-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-7px);
+  }
+  40% {
+    transform: translateX(7px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+.shake {
+  animation: kame-shake 0.36s ease-in-out;
+}
+
+@keyframes kame-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: kame-fade-up 0.28s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shake,
+  .fade-up {
+    animation: none;
+  }
+}
