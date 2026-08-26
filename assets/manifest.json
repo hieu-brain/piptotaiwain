@@ -1,5 +1,152 @@
 [
  {
+  "name": "act-ask-driver",
+  "w": 451,
+  "h": 360,
+  "webp_kb": 46,
+  "png_kb": 343
+ },
+ {
+  "name": "act-ask-way",
+  "w": 412,
+  "h": 327,
+  "webp_kb": 41,
+  "png_kb": 291
+ },
+ {
+  "name": "act-bargain",
+  "w": 406,
+  "h": 306,
+  "webp_kb": 34,
+  "png_kb": 261
+ },
+ {
+  "name": "act-buy-card",
+  "w": 390,
+  "h": 338,
+  "webp_kb": 37,
+  "png_kb": 275
+ },
+ {
+  "name": "act-buy-ticket",
+  "w": 378,
+  "h": 321,
+  "webp_kb": 39,
+  "png_kb": 263
+ },
+ {
+  "name": "act-drink-tea",
+  "w": 388,
+  "h": 385,
+  "webp_kb": 43,
+  "png_kb": 314
+ },
+ {
+  "name": "act-get-off",
+  "w": 451,
+  "h": 348,
+  "webp_kb": 45,
+  "png_kb": 329
+ },
+ {
+  "name": "act-gift",
+  "w": 388,
+  "h": 345,
+  "webp_kb": 42,
+  "png_kb": 294
+ },
+ {
+  "name": "act-handshake",
+  "w": 330,
+  "h": 384,
+  "webp_kb": 28,
+  "png_kb": 214
+ },
+ {
+  "name": "act-order",
+  "w": 337,
+  "h": 320,
+  "webp_kb": 30,
+  "png_kb": 229
+ },
+ {
+  "name": "act-order-one",
+  "w": 382,
+  "h": 345,
+  "webp_kb": 44,
+  "png_kb": 296
+ },
+ {
+  "name": "act-pay",
+  "w": 404,
+  "h": 332,
+  "webp_kb": 30,
+  "png_kb": 267
+ },
+ {
+  "name": "act-point-menu",
+  "w": 430,
+  "h": 320,
+  "webp_kb": 32,
+  "png_kb": 279
+ },
+ {
+  "name": "act-selfie",
+  "w": 397,
+  "h": 321,
+  "webp_kb": 40,
+  "png_kb": 278
+ },
+ {
+  "name": "act-stop-button",
+  "w": 451,
+  "h": 351,
+  "webp_kb": 45,
+  "png_kb": 331
+ },
+ {
+  "name": "act-tap-card",
+  "w": 370,
+  "h": 312,
+  "webp_kb": 29,
+  "png_kb": 236
+ },
+ {
+  "name": "act-topup",
+  "w": 309,
+  "h": 320,
+  "webp_kb": 27,
+  "png_kb": 205
+ },
+ {
+  "name": "act-try-on",
+  "w": 335,
+  "h": 341,
+  "webp_kb": 32,
+  "png_kb": 238
+ },
+ {
+  "name": "act-two-people",
+  "w": 407,
+  "h": 408,
+  "webp_kb": 47,
+  "png_kb": 349
+ },
+ {
+  "name": "act-wait-bus",
+  "w": 426,
+  "h": 354,
+  "webp_kb": 33,
+  "png_kb": 288
+ },
+ {
+  "name": "act-whats-this",
+  "w": 356,
+  "h": 347,
+  "webp_kb": 44,
+  "png_kb": 279
+ },
+ {
   "name": "badge-heart",
   "w": 361,
   "h": 366,
@@ -42,6 +189,48 @@
   "png_kb": 218
  },
  {
+  "name": "drink-half-sugar",
+  "w": 291,
+  "h": 287,
+  "webp_kb": 14,
+  "png_kb": 149
+ },
+ {
+  "name": "drink-large",
+  "w": 390,
+  "h": 333,
+  "webp_kb": 33,
+  "png_kb": 263
+ },
+ {
+  "name": "drink-less-ice",
+  "w": 191,
+  "h": 292,
+  "webp_kb": 13,
+  "png_kb": 107
+ },
+ {
+  "name": "drink-less-sugar",
+  "w": 234,
+  "h": 292,
+  "webp_kb": 13,
+  "png_kb": 126
+ },
+ {
+  "name": "drink-no-ice",
+  "w": 373,
+  "h": 294,
+  "webp_kb": 18,
+  "png_kb": 197
+ },
+ {
+  "name": "drink-takeout",
+  "w": 425,
+  "h": 338,
+  "webp_kb": 42,
+  "png_kb": 304
+ },
+ {
   "name": "food-bubbletea",
   "w": 249,
   "h": 380,
@@ -56,11 +245,25 @@
   "png_kb": 199
  },
  {
+  "name": "food-one-more",
+  "w": 409,
+  "h": 316,
+  "webp_kb": 31,
+  "png_kb": 252
+ },
+ {
   "name": "food-pineapplecake",
   "w": 353,
   "h": 269,
   "webp_kb": 18,
   "png_kb": 141
+ },
+ {
+  "name": "food-sample",
+  "w": 367,
+  "h": 335,
+  "webp_kb": 37,
+  "png_kb": 265
  },
  {
   "name": "food-shavedice",
@@ -75,6 +278,13 @@
   "h": 271,
   "webp_kb": 22,
   "png_kb": 139
+ },
+ {
+  "name": "food-teaset",
+  "w": 393,
+  "h": 385,
+  "webp_kb": 43,
+  "png_kb": 312
  },
  {
   "name": "food-xiaolongbao",
@@ -103,6 +313,13 @@
   "h": 276,
   "webp_kb": 16,
   "png_kb": 158
+ },
+ {
+  "name": "go-mountain-road",
+  "w": 427,
+  "h": 348,
+  "webp_kb": 46,
+  "png_kb": 321
  },
  {
   "name": "go-mrt",
@@ -147,6 +364,13 @@
   "png_kb": 142
  },
  {
+  "name": "item-colors",
+  "w": 396,
+  "h": 236,
+  "webp_kb": 25,
+  "png_kb": 190
+ },
+ {
   "name": "item-lantern",
   "w": 241,
   "h": 389,
@@ -166,6 +390,13 @@
   "h": 271,
   "webp_kb": 10,
   "png_kb": 148
+ },
+ {
+  "name": "item-sizes",
+  "w": 358,
+  "h": 227,
+  "webp_kb": 20,
+  "png_kb": 157
  },
  {
   "name": "item-skylantern",
@@ -189,11 +420,32 @@
   "png_kb": 127
  },
  {
+  "name": "place-101-tall",
+  "w": 397,
+  "h": 326,
+  "webp_kb": 41,
+  "png_kb": 276
+ },
+ {
   "name": "place-airport",
   "w": 396,
   "h": 326,
   "webp_kb": 18,
   "png_kb": 147
+ },
+ {
+  "name": "place-bus-inside",
+  "w": 427,
+  "h": 351,
+  "webp_kb": 43,
+  "png_kb": 309
+ },
+ {
+  "name": "place-elevator",
+  "w": 381,
+  "h": 326,
+  "webp_kb": 35,
+  "png_kb": 257
  },
  {
   "name": "place-jiufen-stairs",
@@ -203,11 +455,60 @@
   "png_kb": 249
  },
  {
+  "name": "place-jiufen-street",
+  "w": 393,
+  "h": 391,
+  "webp_kb": 46,
+  "png_kb": 329
+ },
+ {
+  "name": "place-jiufen-teahouse",
+  "w": 390,
+  "h": 390,
+  "webp_kb": 50,
+  "png_kb": 331
+ },
+ {
   "name": "place-nightmarket",
   "w": 350,
   "h": 304,
   "webp_kb": 26,
   "png_kb": 197
+ },
+ {
+  "name": "place-observatory",
+  "w": 396,
+  "h": 321,
+  "webp_kb": 43,
+  "png_kb": 273
+ },
+ {
+  "name": "place-platform",
+  "w": 430,
+  "h": 314,
+  "webp_kb": 43,
+  "png_kb": 289
+ },
+ {
+  "name": "place-station",
+  "w": 413,
+  "h": 323,
+  "webp_kb": 39,
+  "png_kb": 274
+ },
+ {
+  "name": "place-sunset",
+  "w": 389,
+  "h": 391,
+  "webp_kb": 39,
+  "png_kb": 306
+ },
+ {
+  "name": "place-table-for-two",
+  "w": 412,
+  "h": 295,
+  "webp_kb": 33,
+  "png_kb": 248
  },
  {
   "name": "place-teahouse",
@@ -222,6 +523,27 @@
   "h": 335,
   "webp_kb": 26,
   "png_kb": 212
+ },
+ {
+  "name": "pose-amazed",
+  "w": 381,
+  "h": 321,
+  "webp_kb": 43,
+  "png_kb": 277
+ },
+ {
+  "name": "pose-ask",
+  "w": 218,
+  "h": 399,
+  "webp_kb": 26,
+  "png_kb": 176
+ },
+ {
+  "name": "pose-browsing",
+  "w": 384,
+  "h": 306,
+  "webp_kb": 33,
+  "png_kb": 244
  },
  {
   "name": "pose-card",
@@ -245,11 +567,39 @@
   "png_kb": 91
  },
  {
+  "name": "pose-full",
+  "w": 357,
+  "h": 345,
+  "webp_kb": 39,
+  "png_kb": 270
+ },
+ {
+  "name": "pose-myself",
+  "w": 214,
+  "h": 386,
+  "webp_kb": 24,
+  "png_kb": 163
+ },
+ {
+  "name": "pose-no-problem",
+  "w": 236,
+  "h": 380,
+  "webp_kb": 26,
+  "png_kb": 177
+ },
+ {
   "name": "pose-point",
   "w": 228,
   "h": 512,
   "webp_kb": 18,
   "png_kb": 111
+ },
+ {
+  "name": "pose-shocked",
+  "w": 310,
+  "h": 297,
+  "webp_kb": 22,
+  "png_kb": 184
  },
  {
   "name": "pose-sleep",
@@ -259,6 +609,20 @@
   "png_kb": 142
  },
  {
+  "name": "pose-sorry",
+  "w": 267,
+  "h": 355,
+  "webp_kb": 24,
+  "png_kb": 173
+ },
+ {
+  "name": "pose-spicy",
+  "w": 356,
+  "h": 341,
+  "webp_kb": 39,
+  "png_kb": 266
+ },
+ {
   "name": "pose-surprise",
   "w": 199,
   "h": 512,
@@ -266,11 +630,25 @@
   "png_kb": 110
  },
  {
+  "name": "pose-thanks",
+  "w": 228,
+  "h": 363,
+  "webp_kb": 22,
+  "png_kb": 158
+ },
+ {
   "name": "pose-think",
   "w": 234,
   "h": 417,
   "webp_kb": 17,
   "png_kb": 156
+ },
+ {
+  "name": "pose-watch-sunset",
+  "w": 390,
+  "h": 385,
+  "webp_kb": 42,
+  "png_kb": 312
  },
  {
   "name": "pose-wave",

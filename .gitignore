@@ -46,3 +46,9 @@ assets/source-*.png
 
 # font gốc, chỉ dùng lúc chạy npm run fonts
 /.fonts-cache/
+
+# Ảnh master PNG để ngoài repo cho nhẹ (34MB). App chỉ dùng webp trong public/art,
+# còn muốn cắt lại thì đã có tấm lưới gốc ở assets/sheets/*.webp
+assets/*.png
+# tấm lưới thô GPT Image sinh ra, đã lưu bản webp trong assets/sheets
+Learning website mobile mockups/art/Firefly*.png
