@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/check-fonts.mjs && next build",
+    "build": "node scripts/check-fonts.mjs && next build && node scripts/build-sw.mjs",
     "start": "next start",
     "fonts": "node scripts/subset-fonts.mjs",
-    "check-fonts": "node scripts/check-fonts.mjs"
+    "check-fonts": "node scripts/check-fonts.mjs",
+    "test-sw": "node scripts/test-sw.mjs"
   },
   "dependencies": {
     "next": "16.3.3",

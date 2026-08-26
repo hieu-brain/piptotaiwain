@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import AppFrame from "@/components/AppFrame";
+import ServiceWorker from "@/components/ServiceWorker";
 import "./globals.css";
 
 /**
@@ -28,6 +29,14 @@ export const metadata: Metadata = {
   title: "カメと台北",
   description: "台北3日間のたびのための、ちょこっと中国語",
   appleWebApp: { capable: true, title: "カメと台北", statusBarStyle: "default" },
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export const viewport: Viewport = {
@@ -45,6 +54,7 @@ export default function RootLayout({
     <html lang="ja" className={`${zenMaru.variable} ${wenKai.variable}`}>
       <body className="antialiased">
         <AppFrame>{children}</AppFrame>
+        <ServiceWorker />
       </body>
     </html>
   );
