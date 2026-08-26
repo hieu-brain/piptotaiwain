@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { STORAGE } from "@/lib/config";
+import { trophyId } from "@/lib/stickers";
 import { allLessons, levels } from "@/lib/vocab";
 
 export type Progress = {
@@ -66,12 +67,42 @@ function write(progress: Progress) {
   }
 }
 
-/** Học xong 1 bài. Học lại lần nữa không ghi đè mốc thời gian lần đầu. */
-export function markLessonDone(lessonId: string): Progress {
+/**
+ * Học xong 1 bài: ghi mốc thời gian, trao sticker của bài, và trao thêm cúp
+ * nếu bài này là bài cuối còn thiếu của ngày hôm đó.
+ * Học lại lần nữa không ghi đè và không trao thêm gì.
+ */
+export function completeLesson(lessonId: string): {
+  progress: Progress;
+  newStickers: string[];
+} {
   const progress = readProgress();
+  const newStickers: string[] = [];
+
   if (!progress.done[lessonId]) {
     progress.done[lessonId] = Date.now();
+    newStickers.push(lessonId);
+
+    const level = levels.find((l) => l.lessons.some((x) => x.id === lessonId));
+    if (level && level.lessons.every((l) => progress.done[l.id])) {
+      const trophy = trophyId(level.id);
+      if (!progress.stickers.includes(trophy)) newStickers.push(trophy);
+    }
+
+    progress.stickers = [...progress.stickers, ...newStickers];
     write(progress);
   }
-  return progress;
+
+  return { progress, newStickers };
+}
+
+/** Ngày đã học xong hết bài, dùng cho bản đồ mở khóa dần */
+export function isLevelDone(progress: Progress, levelId: string): boolean {
+  const level = levels.find((l) => l.id === levelId);
+  return Boolean(level?.lessons.every((l) => progress.done[l.id]));
+}
+
+/** Mọi từ đã học, theo đúng thứ tự bài, dùng cho ことばノート */
+export function learnedLessons(progress: Progress) {
+  return allLessons().filter(({ lesson }) => progress.done[lesson.id]);
 }

@@ -22,7 +22,7 @@ type SpeechState = {
   mainlandOnly: boolean;
 };
 
-const RATE = 0.85;
+const RATE = 0.75;
 
 function normalize(lang: string): string {
   return lang.replace("_", "-").toLowerCase();

@@ -35,11 +35,14 @@ export default function LevelBoard() {
 
       <div className="mt-auto pt-5 pb-4">
         <Link
-          href={`/level/${next.level.id}`}
+          href={`/lesson/${next.lesson.id}`}
           className="press block rounded-[18px] bg-lantern py-4 text-center text-lg font-bold text-paper shadow-[0_4px_0_var(--color-lantern-deep)]"
         >
           {started ? "つづきから" : "はじめる"}
         </Link>
+        <p className="mt-3 text-center text-xs text-ink-soft">
+          Day {next.level.day}・{next.lesson.title}
+        </p>
       </div>
     </>
   );
