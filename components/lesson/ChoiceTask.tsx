@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import SpeakButton, { SpeakerGlyph } from "@/components/lesson/SpeakButton";
+import JaText from "@/components/JaText";
 import type { ChoiceTask as ChoiceTaskType } from "@/lib/practice";
 import { useSpeech } from "@/lib/useSpeech";
 import type { Word } from "@/lib/vocab";
@@ -121,7 +122,7 @@ export default function ChoiceTask({
                   : "text-[15px] leading-snug font-bold"
               }`}
             >
-              {task.kind === "listen" ? choice.hanzi : choice.ja}
+              {task.kind === "listen" ? choice.hanzi : <JaText text={choice.ja} />}
             </button>
           );
         })}
@@ -147,7 +148,7 @@ export default function ChoiceTask({
               </span>
             </p>
             <p className="mt-1 text-center text-[15px] font-bold text-ink">
-              {task.word.ja}
+              <JaText text={task.word.ja} />
             </p>
             <button
               type="button"

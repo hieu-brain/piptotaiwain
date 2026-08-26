@@ -6,7 +6,7 @@ Tài liệu này là nguồn sự thật duy nhất của dự án. Đọc hết
 
 App học tiếng Trung dạng game cho một bạn 16 tuổi người Nhật (sống ở Okinawa, đọc được kanji cơ bản) chuẩn bị đi Đài Bắc 3 ngày 2 đêm, khởi hành 2026-09-19, bay từ Naha khoảng 1 tiếng rưỡi.
 
-App clone cấu trúc của "Pip to Japan" (app do Grok build, đã phân tích kỹ) và nâng cấp cho phù hợp đối tượng 16 tuổi. Mascot: chú rùa biển Okinawa (mai xanh có hoa hibiscus san hô, bụng kem, balo cam). Toàn bộ asset hình đã sinh xong bằng GPT Image 2 và đã xử lý sẵn.
+App clone cấu trúc của "Pip to Japan" (app do Grok build, đã phân tích kỹ) và nâng cấp cho phù hợp đối tượng 16 tuổi. Mascot: chú rùa biển Okinawa tên **ピップ (Pip)** (mai xanh có hoa hibiscus san hô, bụng kem, balo cam), tên đặt ở `MASCOT` trong `lib/config.ts`. Lần mở app đầu tiên có màn chào ピップ tự giới thiệu, xem xong lưu cờ vào localStorage. Toàn bộ asset hình đã sinh xong bằng GPT Image 2 và đã xử lý sẵn.
 
 Người dùng cuối là 1 người (cháu của chủ dự án), không cần backend, không cần đăng nhập, không thu thập dữ liệu.
 

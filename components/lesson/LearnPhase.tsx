@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import JaText from "@/components/JaText";
 import SpeakButton from "@/components/lesson/SpeakButton";
 import TopBar from "@/components/lesson/TopBar";
 import { artSrc, wordArt } from "@/lib/art-map";
@@ -47,7 +48,9 @@ export default function LearnPhase({
             {word.hanzi}
           </p>
           <p className="mt-2 text-[19px] font-medium text-sea-deep">{word.pinyin}</p>
-          <p className="mt-3.5 text-xl font-bold text-ink">{word.ja}</p>
+          <p className="mt-3.5 text-xl font-bold text-ink">
+            <JaText text={word.ja} />
+          </p>
           <p className="mt-1.5 text-[13px] text-ink-soft">{word.kana}</p>
 
           {canSpeak && (

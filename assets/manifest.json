@@ -64,17 +64,17 @@
  },
  {
   "name": "food-shavedice",
-  "w": 365,
-  "h": 369,
-  "webp_kb": 21,
+  "w": 349,
+  "h": 301,
+  "webp_kb": 28,
   "png_kb": 182
  },
  {
   "name": "food-tea",
-  "w": 298,
-  "h": 356,
-  "webp_kb": 16,
-  "png_kb": 143
+  "w": 282,
+  "h": 271,
+  "webp_kb": 22,
+  "png_kb": 139
  },
  {
   "name": "food-xiaolongbao",
@@ -106,10 +106,10 @@
  },
  {
   "name": "go-mrt",
-  "w": 348,
-  "h": 313,
-  "webp_kb": 16,
-  "png_kb": 154
+  "w": 246,
+  "h": 297,
+  "webp_kb": 23,
+  "png_kb": 147
  },
  {
   "name": "go-plane",
@@ -141,10 +141,10 @@
  },
  {
   "name": "item-coins",
-  "w": 360,
-  "h": 325,
-  "webp_kb": 17,
-  "png_kb": 144
+  "w": 294,
+  "h": 309,
+  "webp_kb": 22,
+  "png_kb": 142
  },
  {
   "name": "item-lantern",

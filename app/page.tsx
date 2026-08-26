@@ -1,4 +1,5 @@
 import Countdown from "@/components/Countdown";
+import Welcome from "@/components/Welcome";
 import LevelBoard from "@/components/LevelBoard";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       </div>
 
       <LevelBoard />
+      <Welcome />
     </main>
   );
 }

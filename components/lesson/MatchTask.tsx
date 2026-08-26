@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import JaText from "@/components/JaText";
 import type { MatchTask as MatchTaskType } from "@/lib/practice";
 
 type Tile = { key: string; pair: string; side: "hanzi" | "ja"; text: string };
@@ -103,7 +104,7 @@ export default function MatchTask({
                       : "border-sand bg-card text-ink"
               }`}
             >
-              {tile.text}
+              {tile.side === "ja" ? <JaText text={tile.text} /> : tile.text}
               {isMatched && (
                 <svg
                   width="16"

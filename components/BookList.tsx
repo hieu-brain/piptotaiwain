@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { SpeakerGlyph } from "@/components/lesson/SpeakButton";
+import JaText from "@/components/JaText";
 import { artSrc } from "@/lib/art-map";
 import { learnedLessons, useProgress } from "@/lib/progress";
 import { useSpeech } from "@/lib/useSpeech";
@@ -76,7 +77,9 @@ export default function BookList() {
                         <p className="mt-0.5 text-[13px] font-medium text-sea-deep">
                           {word.pinyin}
                         </p>
-                        <p className="mt-1 text-sm font-bold text-ink">{word.ja}</p>
+                        <p className="mt-1 text-sm font-bold text-ink">
+                          <JaText text={word.ja} />
+                        </p>
                         <p className="mt-0.5 text-[11px] text-ink-soft">{word.kana}</p>
                       </div>
 
