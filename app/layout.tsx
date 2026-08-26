@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import BottomNav from "@/components/BottomNav";
+import AppFrame from "@/components/AppFrame";
 import "./globals.css";
 
 /**
@@ -44,10 +44,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${zenMaru.variable} ${wenKai.variable}`}>
       <body className="antialiased">
-        <div className="mx-auto flex min-h-dvh w-full max-w-[430px] flex-col pb-[84px]">
-          {children}
-        </div>
-        <BottomNav />
+        <AppFrame>{children}</AppFrame>
       </body>
     </html>
   );

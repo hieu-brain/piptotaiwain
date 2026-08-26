@@ -57,3 +57,21 @@ export function useProgress(): { progress: Progress; ready: boolean } {
 
   return { progress, ready };
 }
+
+function write(progress: Progress) {
+  try {
+    window.localStorage.setItem(STORAGE.progress, JSON.stringify(progress));
+  } catch {
+    /* hết chỗ hoặc bị chặn thì thôi, không làm hỏng bài học */
+  }
+}
+
+/** Học xong 1 bài. Học lại lần nữa không ghi đè mốc thời gian lần đầu. */
+export function markLessonDone(lessonId: string): Progress {
+  const progress = readProgress();
+  if (!progress.done[lessonId]) {
+    progress.done[lessonId] = Date.now();
+    write(progress);
+  }
+  return progress;
+}
