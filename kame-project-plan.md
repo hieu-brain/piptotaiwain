@@ -25,7 +25,7 @@ Quan trọng: KHÔNG tự vẽ SVG thay thế illustration, KHÔNG dùng icon fo
 ## 3. Đối chiếu app gốc Pip: giữ gì, nâng gì
 
 ### Giữ nguyên từ Pip (đã chứng minh hiệu quả)
-- PIN gate mở app, PIN đúng thì mở khóa cho cả phiên tab, đóng tab thì khóa lại. Sai chỉ hiện câu nhẹ nhàng, không đếm số lần. PIN: `110826`, đặt ở 1 constant
+- ~~PIN gate mở app~~ ĐÃ BỎ (chủ dự án chốt 2026-08-27): app mở thẳng vào Home, không hỏi mã. Code PIN cũ còn trong git history nếu cần lấy lại
 - Home: lời chào + countdown ("台北まで あと N日"), thẻ level to, nút tiếp tục nổi bật
 - Trang "Our trip": lịch trình thật từng ngày (giờ, địa điểm), mỗi ngày có nút nhảy vào bài học của ngày đó
 - Level = pack độc lập: code-split theo level, vào level nào load level đó
@@ -64,9 +64,10 @@ levels[3]:
 
 - Next.js (App Router) + TypeScript + Tailwind, static export được càng tốt (`output: 'export'`) vì không có server logic. Nếu static export gây khó cho PWA plugin thì để default cũng được
 - Deploy: Vercel (kết nối GitHub repo)
-- Font qua `next/font`, self-host tự động:
-  - Tiếng Nhật + Latin: **Zen Maru Gothic** (tròn, hợp storybook)
-  - Chữ Hán phồn thể: **LXGW WenKai TC** (nét bút viết tay, rất hợp chất màu nước), fallback Noto Sans TC
+- Font self-host qua `next/font/local`, đã cắt subset (chốt 2026-08-27, kéo lên sớm từ chunk 5):
+  - Tiếng Nhật + Latin: **Zen Maru Gothic** 400/500/700/900
+  - Chữ Hán phồn thể: **LXGW WenKai TC** 400 (nét bút viết tay), fallback Noto Sans TC
+  - `npm run fonts` cắt font còn đúng số chữ app dùng (~676 chữ, 463KB thay vì 18MB nếu để nguyên bộ CJK). `npm run build` tự chạy `check-fonts` và fail nếu copy mới có chữ chưa nằm trong subset
 - State: React state + localStorage, không cần thư viện state ngoài
 - Không thêm dependency nặng. Không UI kit. Tự viết component theo design tokens
 
@@ -156,11 +157,11 @@ Làm đúng thứ tự, xong mỗi chunk DỪNG lại chờ chủ dự án revie
 
 | Chunk | Nội dung | Nghiệm thu |
 |---|---|---|
-| 1 | Scaffold + tokens + font + PIN gate + layout/bottom nav + Home tĩnh | Mở trên iPhone thấy Home đẹp, PIN hoạt động, countdown đúng |
+| 1 | Scaffold + tokens + font + layout/bottom nav + Home tĩnh | Mở trên iPhone thấy Home đẹp, countdown đúng |
 | 2 | Trip + Library + Level list (đọc từ vocab JSON) | Đi lại giữa các trang mượt, poster phóng to được |
 | 3 | Lesson engine đủ 2 phase + TTS | Học trọn 1 bài trên iPhone thật, TTS kêu tiếng Trung |
 | 4 | Progress localStorage + sticker + bản đồ mở khóa | Học xong bài thì sticker và bản đồ cập nhật, reload không mất |
-| 5 | PWA + offline + deploy Vercel | Test airplane mode pass, add to home screen có icon |
+| 5 | PWA + offline + deploy Vercel (subset font đã làm sớm ở chunk 2) | Test airplane mode pass, add to home screen có icon |
 | 6 | Polish: transition, âm lượng chữ, empty state, tinh chỉnh theo review | Chủ dự án gật đầu |
 
 Mỗi chunk kết thúc bằng: chạy được, không lỗi console, commit git message rõ ràng.

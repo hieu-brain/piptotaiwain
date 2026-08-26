@@ -1,24 +1,27 @@
 import type { Metadata, Viewport } from "next";
-import { LXGW_WenKai_TC, Zen_Maru_Gothic } from "next/font/google";
+import localFont from "next/font/local";
 import BottomNav from "@/components/BottomNav";
-import PinGate from "@/components/PinGate";
 import "./globals.css";
 
-const zenMaru = Zen_Maru_Gothic({
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
+/**
+ * Font đã cắt còn đúng số chữ app dùng (xem scripts/subset-fonts.mjs),
+ * nên preload thoải mái: cả bộ chưa tới 500KB.
+ */
+const zenMaru = localFont({
+  src: [
+    { path: "../fonts/ZenMaruGothic-400.woff2", weight: "400", style: "normal" },
+    { path: "../fonts/ZenMaruGothic-500.woff2", weight: "500", style: "normal" },
+    { path: "../fonts/ZenMaruGothic-700.woff2", weight: "700", style: "normal" },
+    { path: "../fonts/ZenMaruGothic-900.woff2", weight: "900", style: "normal" },
+  ],
   variable: "--font-zen-maru",
   display: "swap",
-  // font tiếng Nhật có rất nhiều slice, preload hết sẽ nặng vô ích
-  preload: false,
 });
 
-const wenKai = LXGW_WenKai_TC({
-  subsets: ["latin"],
-  weight: ["400", "700"],
+const wenKai = localFont({
+  src: [{ path: "../fonts/LXGWWenKaiTC-400.woff2", weight: "400", style: "normal" }],
   variable: "--font-wenkai",
   display: "swap",
-  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -41,12 +44,10 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${zenMaru.variable} ${wenKai.variable}`}>
       <body className="antialiased">
-        <PinGate>
-          <div className="mx-auto flex min-h-dvh w-full max-w-[430px] flex-col pb-[84px]">
-            {children}
-          </div>
-          <BottomNav />
-        </PinGate>
+        <div className="mx-auto flex min-h-dvh w-full max-w-[430px] flex-col pb-[84px]">
+          {children}
+        </div>
+        <BottomNav />
       </body>
     </html>
   );

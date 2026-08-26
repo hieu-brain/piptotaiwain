@@ -43,3 +43,6 @@ next-env.d.ts
 # nguồn ảnh gốc chưa xử lý, không cần trong repo build
 assets/source-*.png
 "Learning website mobile mockups.zip"
+
+# font gốc, chỉ dùng lúc chạy npm run fonts
+/.fonts-cache/
