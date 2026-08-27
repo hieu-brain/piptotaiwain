@@ -1,55 +1,46 @@
-# Asset cần sinh lại
+# Asset cần sinh lại - gộp vào 1 tấm
 
-Ba tấm dưới đây bị xén mất một phần mai rùa ở mép trái ngay từ khâu cắt ảnh gốc,
-pixel đã mất nên không vá lại được, phải sinh lại.
+Bốn ô, một lần sinh, **20 credit**. Dùng lưới 2x2.
 
-| File | Hỏng gì | Đang dùng cho |
+| Ô | Hỏng gì | Đang dùng cho |
 |---|---|---|
-| `pose-point` | mai và nửa bông dâm bụt bị cắt phẳng bên trái | 我是日本人, 請問, 不好意思, hình đại diện bài d3l1 |
-| `pose-think` | rìa mai bên trái bị cắt | 對不起, 幾點, hình đại diện bài d2l3 |
+| `pose-point` | mai và nửa bông dâm bụt bị cắt phẳng bên trái | 我是日本人, 請問, 不好意思 |
+| `pose-think` | rìa mai bên trái bị cắt | 幾點, hình đại diện bài d2l3 |
 | `pose-card` | mai và hoa dâm bụt bị cắt bên trái | 可以刷卡嗎 |
+| `place-101-tall` | model vẽ ra tháp lưới trắng giống Tokyo Skytree, không phải 101 | 好高 |
 
-## Cách sinh
+## Prompt
 
-Dán từng prompt một. Phần **khung hình** là chỗ quan trọng nhất, chính nó là
-nguyên nhân của lần hỏng vừa rồi.
+Đính kèm character sheet A như mọi lần. Tỉ lệ 1:1 hoặc 3:2 đều được.
 
-### Khối mô tả chung (giữ nguyên ở cả 3 prompt)
+```
+[REF]
 
-> Children's watercolor storybook illustration on white background. A cute baby
-> sea turtle from Okinawa: soft green skin with teal spotted patterns, cream
-> plastron (belly shell), a teal-green carapace decorated with a coral-orange
-> hibiscus flower on the side, wearing a small orange backpack with straps over
-> both shoulders. Gentle watercolor washes, soft pencil outlines, warm and
-> friendly, no harsh black lines, no digital gradients, no cel shading.
->
-> **Framing: the entire turtle including the full carapace, backpack and all
-> limbs must be completely inside the frame with generous empty margin on all
-> four sides. Nothing may touch or cross the image border.** Centered composition,
-> plain white background with no scenery, no shadow on the ground, no text.
+A set of 4 separate hand-painted illustrations arranged in a clean 2x2 grid on pure white background, evenly spaced, no overlap, generous empty margin around each item, each item complete and not cropped:
 
-### 1. pose-point
+1. the sea turtle standing and pointing forward with one front flipper, mouth open in a cheerful "look over there" expression, three-quarter view with the coral hibiscus on its carapace fully visible
+2. the sea turtle holding an open paper map with both front flippers, looking down at it with a puzzled thinking expression, three-quarter view, backpack and full carapace visible
+3. the sea turtle holding up a small colorful transit card in one front flipper, showing it to the viewer with a proud happy smile, three-quarter view, full carapace with hibiscus visible
+4. Taipei 101 seen from the ground looking up: a tall tower built of eight stacked trapezoid segments that flare outward at the top of each segment, blue-green tinted glass, a tall thin spire on top, a wider pedestal base at street level, small green trees around the base, and the sea turtle standing at the foot of the tower drawn very small to show the scale
 
-> [khối mô tả chung] The turtle stands and points forward with one front flipper,
-> mouth open in a cheerful "look over there!" expression, the other flipper
-> relaxed at its side. Three-quarter view, body turned slightly to the side so
-> the hibiscus on the carapace is visible.
+For items 1 to 3 the entire turtle including the full carapace, backpack and all limbs must be completely inside its cell with empty margin on all four sides. Nothing may touch or cross the edge of a cell.
 
-### 2. pose-think
-
-> [khối mô tả chung] The turtle stands holding an open paper map with both front
-> flippers, looking down at it with a puzzled, thinking expression, one flipper
-> touching its chin. Three-quarter view, the backpack and the full carapace
-> visible behind.
-
-### 3. pose-card
-
-> [khối mô tả chung] The turtle stands holding up a small colorful transit card
-> (pastel stripes) in one front flipper, showing it to the viewer with a proud,
-> happy smile. Three-quarter view, full carapace with hibiscus visible.
+[STYLE]
+[NEGATIVE]
+No text or lettering anywhere, no numbers.
+```
 
 ## Sau khi sinh xong
 
-Ném file PNG thô vào thư mục `assets/` với tên bất kỳ rồi báo, phần cắt nền,
-crop, xuất webp và cập nhật `manifest.json` đã có sẵn quy trình, chạy lại là xong.
-Nhớ kiểm tra lại bằng cách quét mép ảnh trước khi thay vào app.
+Lưu đúng tên **`sheet-fix.png`** vào thư mục `Learning website mobile mockups/art/`
+rồi báo tôi, hoặc tự chạy:
+
+```
+python3 scripts/cut-sheets.py            # cắt thử, xem báo cáo
+python3 scripts/cut-sheets.py --write     # ghi đè 4 asset cũ
+python3 scripts/check-art.py              # phải hết dòng "chờ sinh lại"
+```
+
+Script đã biết tấm này, tự dò lưới 2x2, cắt nền, crop sát và ghi đè đúng 4 tên trên.
+Sau đó nhớ bỏ 4 tên đó khỏi `KNOWN_BROKEN` và `OK_TOUCHES_EDGE` trong
+`scripts/check-art.py` để lần sau nó kiểm thật.

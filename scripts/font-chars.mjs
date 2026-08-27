@@ -51,7 +51,7 @@ export async function collectChars() {
   for (const dir of SCAN_DIRS) {
     for (const file of await walk(path.join(ROOT, dir))) {
       if (!SCAN_EXT.has(path.extname(file))) continue;
-      for (const ch of await readFile(file, "utf8")) jp.add(ch);
+      for (const ch of stripComments(await readFile(file, "utf8"))) jp.add(ch);
     }
   }
 
@@ -69,6 +69,21 @@ export async function collectChars() {
       .join("");
 
   return { hanzi: clean(hanzi), jp: clean(jp) };
+}
+
+/**
+ * Bỏ comment trước khi gom chữ. Comment trong dự án này viết tiếng Việt,
+ * đưa vào subset thì vừa phình font vừa làm check-fonts báo nhầm mỗi lần
+ * thêm một chữ có dấu mới.
+ * Chỉ cắt block comment và dòng bắt đầu bằng //, không đụng tới "https://"
+ * nằm giữa dòng.
+ */
+function stripComments(source) {
+  return source
+    .replace(/\/\*[\s\S]*?\*\//g, " ")
+    .split("\n")
+    .filter((line) => !line.trimStart().startsWith("//"))
+    .join("\n");
 }
 
 async function walk(dir) {

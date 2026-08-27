@@ -66,6 +66,12 @@ SHEETS = [
         "Firefly_gpt-image_[REF]__A set of 6 separate small hand-painted spot illustrations, each showing the sa 986853.png",
         ["drink-half-sugar", "drink-less-sugar", "drink-less-ice", "drink-no-ice", "drink-large", "drink-takeout"],
     ),
+    # Tấm sửa lỗi: 3 pose bị xén mai ở vòng 1 và toà tháp vẽ nhầm thành Skytree.
+    # Lưu tấm sinh ra với đúng tên này rồi chạy lại script.
+    (
+        "sheet-fix.png",
+        ["pose-point", "pose-think", "pose-card", "place-101-tall"],
+    ),
 ]
 
 
@@ -108,7 +114,7 @@ def find_grid(image, want=6):
         for slack in (0.005, 0.01, 0.02, 0.035, 0.05):
             cols = bands(content.sum(axis=0) < h * slack, w * 0.06)
             rows = bands(content.sum(axis=1) < w * slack, h * 0.06)
-            if len(cols) * len(rows) == want and {len(cols), len(rows)} in ({2, 3}, {1, 6}):
+            if len(cols) * len(rows) == want and max(len(cols), len(rows)) <= 6:
                 return cols, rows
             if best is None:
                 best = (cols, rows)

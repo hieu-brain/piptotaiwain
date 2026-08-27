@@ -20,6 +20,7 @@ export default function PracticePhase({
   const pool = level.lessons.flatMap((l) => l.words);
   const [queue, setQueue] = useState<Task[]>(() => buildQueue(lesson.words, pool));
   const [solved, setSolved] = useState(0);
+  const [step, setStep] = useState(0);
 
   const current = queue[0];
   const total = solved + queue.length;
@@ -28,6 +29,8 @@ export default function PracticePhase({
   const advance = useCallback((correct: boolean) => {
     setQueue(([head, ...rest]) => (correct ? rest : [...rest, head]));
     if (correct) setSolved((s) => s + 1);
+    // đếm số lượt đã đi qua, dùng làm key cho câu hỏi bên dưới
+    setStep((s) => s + 1);
   }, []);
 
   useEffect(() => {
@@ -40,7 +43,13 @@ export default function PracticePhase({
     <>
       <TopBar backHref={`/level/${level.id}`} percent={percent} tone="practice" />
 
-      <div key={current.id + queue.length} className="fade-up flex flex-1 flex-col">
+      {/*
+        Key phải đổi sau MỖI lượt. Nếu ghép key từ id + số câu còn lại thì câu
+        cuối cùng trả lời sai sẽ ra đúng key cũ (đẩy về cuối hàng đợi rỗng nên
+        vẫn là 1 câu), React giữ nguyên component và câu hỏi kẹt ở trạng thái
+        đã trả lời, bấm gì cũng không đi tiếp được.
+      */}
+      <div key={`${current.id}-${step}`} className="fade-up flex flex-1 flex-col">
         {current.kind === "match" ? (
           <MatchTask task={current} onDone={() => advance(true)} />
         ) : (
